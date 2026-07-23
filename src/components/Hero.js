@@ -22,6 +22,9 @@ function Hero() {
             <a href="#contact" className="btn-secondary">
               Contact Me
             </a>
+            <a href="/JENGO CV NEW.docx" className="btn-primary" target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
           </div>
         </div>
 
