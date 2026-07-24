@@ -29,7 +29,7 @@ function Hero() {
         </div>
 
         <div className="hero-image-wrap">
-          <img src="/JENGO.jpeg" alt="Jengo Arnold" className="hero-image" />
+          <img src="/JENGO.png" alt="Jengo Arnold" className="hero-image" />
         </div>
       </div>
     </section>
