@@ -9,17 +9,18 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBeq5ewcep2OD7A0nL6fyFz88CjcRhncBQ",
-  authDomain: "jengo-portfolio.firebaseapp.com",
-  projectId: "jengo-portfolio",
-  storageBucket: "jengo-portfolio.firebasestorage.app",
-  messagingSenderId: "362554127235",
-  appId: "1:362554127235:web:75d7de2c3ff0fa6ca37cb6",
-  measurementId: "G-GEN5N2NLCW"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+// eslint-disable-next-line no-unused-vars
 const analytics = getAnalytics(app);
 const db = getFirestore(app);   
 

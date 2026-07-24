@@ -33,10 +33,10 @@ function Contact() {
 
       // Send email using EmailJS
       await emailjs.send(
-        " service_hgaw3ej",
-        "template_dt2tfdv",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         formData,
-        "viuO412fcplvL9DgJ"
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
 
       alert("Message sent successfully!");
