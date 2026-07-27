@@ -8,7 +8,7 @@ function Projects() {
       description:
         "A polished React portfolio showcasing my work, skills, and contact options with responsive layout and clean design.",
       tech: ["React", "Firebase", "CSS"],
-      github: "https://github.com/JengoArnold/PersonalPortifolio",
+      github: " https://jengo.arnoldjaz5.workers.dev/",
     },
     {
       title: "Jerry International School Website",
@@ -29,13 +29,20 @@ function Projects() {
       description:
         "A nonprofit website built to highlight mission, programs, volunteer opportunities, and donation support for the community.",
       tech: ["React", "Accessibility", "Content Strategy"],
-      github: "https://github.com/JengoArnold/DRY-MY-TEARS-INTERNATIONAL",
+      github: " https://visionary-cassata-d65b7a.netlify.app ",
     },
     {
       title: "Basic LAN Setup",
       description:
         "Network design and configuration using Cisco Packet Tracer, including IP planning, device connectivity, and validation testing.",
       tech: ["Networking", "Cisco Packet Tracer"],
+      github: "https://github.com/JengoArnold",
+    },
+    {
+      title: "GitHub Account",
+      description:
+        "I used github to host the project's source code, track changes, and manage version control throughout all developments.",
+      tech: ["GIT", "GITHUB"],
       github: "https://github.com/JengoArnold",
     },
     {
