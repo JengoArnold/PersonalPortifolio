@@ -29,7 +29,7 @@ function Projects() {
       description:
         "A nonprofit website built to highlight mission, programs, volunteer opportunities, and donation support for the community.",
       tech: ["React", "Accessibility", "Content Strategy"],
-      github: " https://visionary-cassata-d65b7a.netlify.app ",
+      github: "  https://drymytearsinternational.org/",   
     },
     {
       title: "Basic LAN Setup",

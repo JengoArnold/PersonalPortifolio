@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import userEvent from '@testing-library/user-event';
+import Navbar from './components/Navbar';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('toggles the mobile navigation menu', async () => {
+  render(<Navbar />);
+
+  const toggleButton = screen.getByRole('button', { name: /toggle navigation menu/i });
+  expect(toggleButton).toBeInTheDocument();
+
+  await userEvent.click(toggleButton);
+  expect(screen.getByRole('navigation')).toHaveClass('open');
 });
