@@ -6,10 +6,7 @@ function Skills() {
     "Network Configuration",
     "Cisco Packet Tracer",
     "TCP/IP Networking",
-    "Firewall Management",
-    "SOC Monitoring",
-    "Threat Detection",
-    "Incident Response",
+    
     "HTML & CSS",
     "JavaScript",
     "React",

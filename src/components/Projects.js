@@ -31,13 +31,7 @@ function Projects() {
       tech: ["React", "Accessibility", "Content Strategy"],
       github: "  https://drymytearsinternational.org/",   
     },
-    {
-      title: "Basic LAN Setup",
-      description:
-        "Network design and configuration using Cisco Packet Tracer, including IP planning, device connectivity, and validation testing.",
-      tech: ["Networking", "Cisco Packet Tracer"],
-      github: "https://github.com/JengoArnold",
-    },
+   
     {
       title: "GitHub Account",
       description:
@@ -45,13 +39,7 @@ function Projects() {
       tech: ["GIT", "GITHUB"],
       github: "https://github.com/JengoArnold",
     },
-    {
-      title: "Network Security Lab",
-      description:
-        "Simulated security lab with firewall rules, VLAN segmentation, and monitoring to improve network defenses and visibility.",
-      tech: ["Security", "Firewall", "VLAN"],
-      github: "https://github.com/JengoArnold",
-    },
+   
   ];
 
   return (

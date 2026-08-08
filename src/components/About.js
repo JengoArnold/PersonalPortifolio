@@ -13,7 +13,7 @@ function About() {
         <div className="about-content">
           <p>
             I’m Jengo Arnold, a Computer Science learner with a growing passion
-            for networking, cyber security, and building practical digital
+            for networking, cyber security, and building practical digital web based
             solutions. I enjoy understanding how systems work, securing them,
             and creating experiences that are both functional and user-friendly.
           </p>
