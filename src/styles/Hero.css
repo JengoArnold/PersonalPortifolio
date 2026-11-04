@@ -15,14 +15,30 @@
   gap: 40px;
   width: 100%;
   max-width: 1200px;
+}
+
+.hero-text,
+.hero-image-wrap {
   opacity: 0;
-  transform: translateY(18px);
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
-.hero.is-visible .hero-content {
+.hero-text {
+  transform: translateX(-24px);
+}
+
+.hero-image-wrap {
+  transform: translateX(24px);
+}
+
+.hero.is-visible .hero-text,
+.hero.is-visible .hero-image-wrap {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
+}
+
+.hero.is-visible .hero-image-wrap {
+  transition-delay: 0.12s;
 }
 
 .hero-text {
@@ -87,7 +103,7 @@
 .hero-specialty-button:hover {
   border-color: #2563eb;
   color: #1d4ed8;
-  transform: translateY(-2px);
+  transform: scale(1.03);
 }
 
 .hero-specialty-button[aria-pressed="true"] {
@@ -129,7 +145,7 @@
 }
 
 .hero-image:hover {
-  transform: translateY(-5px);
+  transform: scale(1.015);
   box-shadow: 0 26px 48px rgba(15, 23, 42, 0.17);
 }
 
@@ -154,7 +170,7 @@
 .btn-primary:hover {
   background-color: #1e40af;
   box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
-  transform: translateY(-2px);
+  transform: scale(1.025);
 }
 
 .btn-secondary {
@@ -165,30 +181,30 @@
 .btn-secondary:hover {
   background-color: #2563eb;
   color: #ffffff;
-  transform: translateY(-2px);
+  transform: scale(1.025);
 }
 
 @keyframes hero-rise {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateX(-12px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
 @keyframes hero-role-enter {
   from {
     opacity: 0;
-    transform: translateY(7px);
+    transform: translateX(12px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
@@ -247,7 +263,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-content {
+  .hero-text,
+  .hero-image-wrap {
     opacity: 1;
     transform: none;
     transition: none;
