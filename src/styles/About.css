@@ -8,6 +8,29 @@
   margin: 0 auto;
 }
 
+.about-intro,
+.about-content,
+.about-focus {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about.is-visible .about-intro,
+.about.is-visible .about-content,
+.about.is-visible .about-focus {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about.is-visible .about-content {
+  transition-delay: 0.1s;
+}
+
+.about.is-visible .about-focus {
+  transition-delay: 0.2s;
+}
+
 .about-intro {
   text-align: center;
   margin-bottom: 32px;
@@ -171,6 +194,14 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .about-intro,
+  .about-content,
+  .about-focus {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
   .about-focus-button {
     transition: none;
   }

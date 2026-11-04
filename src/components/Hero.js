@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useScrollReveal from "../hooks/useScrollReveal";
 import "../styles/Hero.css";
 
 const specialties = [
@@ -27,9 +28,10 @@ const specialties = [
 
 function Hero() {
   const [activeSpecialty, setActiveSpecialty] = useState(specialties[0]);
+  const revealRef = useScrollReveal();
 
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero" ref={revealRef}>
       <div className="hero-content">
         <div className="hero-text">
           <h1>Jengo Arnold</h1>

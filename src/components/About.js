@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useScrollReveal from "../hooks/useScrollReveal";
 import "../styles/About.css";
 
 const focusAreas = [
@@ -30,9 +31,10 @@ const focusAreas = [
 
 function About() {
   const [activeFocus, setActiveFocus] = useState(focusAreas[0]);
+  const revealRef = useScrollReveal();
 
   return (
-    <section id="about" className="about">
+    <section id="about" className="about" ref={revealRef}>
       <div className="about-container">
         <div className="about-intro">
           <span>Who I am</span>
