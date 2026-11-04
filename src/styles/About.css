@@ -46,3 +46,136 @@
 .about p:last-child {
   margin-bottom: 0;
 }
+
+.about-focus {
+  margin-top: 32px;
+}
+
+.about-focus-heading {
+  margin-bottom: 16px;
+}
+
+.about-focus-heading span {
+  color: #111827;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.about-focus-heading p {
+  margin: 5px 0 0;
+  font-size: 0.95rem;
+}
+
+.about-focus-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.about-focus-button {
+  min-height: 42px;
+  padding: 9px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #334155;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease, transform 0.2s ease;
+}
+
+.about-focus-button:hover {
+  border-color: #2563eb;
+  color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.about-focus-button[aria-pressed="true"] {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.about-focus-button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.3);
+  outline-offset: 3px;
+}
+
+.about-focus-panel {
+  padding: 22px 24px;
+  border: 1px solid #dbeafe;
+  border-left: 4px solid #2563eb;
+  border-radius: 12px;
+  background: #f8fbff;
+  animation: about-focus-enter 0.35s ease both;
+}
+
+.about-focus-panel h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.2rem;
+}
+
+.about-focus-panel p {
+  margin: 8px 0 16px;
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.about-focus-panel ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-focus-panel li {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #e8f1ff;
+  color: #1e40af;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+@keyframes about-focus-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 72px 18px;
+  }
+
+  .about-content {
+    padding: 24px 20px;
+  }
+
+  .about-focus-panel {
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-focus-button {
+    transition: none;
+  }
+
+  .about-focus-panel {
+    animation: none;
+  }
+}

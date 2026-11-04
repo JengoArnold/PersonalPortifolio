@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/About.css";
 
+const focusAreas = [
+  {
+    id: "security",
+    label: "Cybersecurity",
+    title: "Building a security-first mindset",
+    description:
+      "I’m developing my skills in SOC analysis, threat detection, and incident response, with a focus on understanding how to protect real systems.",
+    tags: ["SOC analysis", "Threat detection", "Incident response"],
+  },
+  {
+    id: "development",
+    label: "Web development",
+    title: "Making useful ideas real",
+    description:
+      "I enjoy turning practical problems into clear, user-friendly web experiences and strengthening my skills with every project I build.",
+    tags: ["Frontend", "Problem solving", "User experience"],
+  },
+  {
+    id: "networking",
+    label: "Networking",
+    title: "Understanding how systems connect",
+    description:
+      "I’m curious about the infrastructure behind the internet: how devices communicate, how networks are designed, and where they can be made more secure.",
+    tags: ["Network fundamentals", "Systems", "Continuous learning"],
+  },
+];
+
 function About() {
+  const [activeFocus, setActiveFocus] = useState(focusAreas[0]);
+
   return (
     <section id="about" className="about">
       <div className="about-container">
@@ -23,6 +52,41 @@ function About() {
             web development, where I combine creativity and technical skills to
             build modern projects that solve real-world problems.
           </p>
+        </div>
+
+        <div className="about-focus">
+          <div className="about-focus-heading">
+            <span>What I’m exploring</span>
+            <p>Choose a focus to learn more about what drives me.</p>
+          </div>
+
+          <div
+            className="about-focus-options"
+            role="group"
+            aria-label="Areas of focus"
+          >
+            {focusAreas.map((focus) => (
+              <button
+                key={focus.id}
+                type="button"
+                className="about-focus-button"
+                aria-pressed={activeFocus.id === focus.id}
+                onClick={() => setActiveFocus(focus)}
+              >
+                {focus.label}
+              </button>
+            ))}
+          </div>
+
+          <article className="about-focus-panel" key={activeFocus.id}>
+            <h3>{activeFocus.title}</h3>
+            <p>{activeFocus.description}</p>
+            <ul aria-label={`${activeFocus.label} topics`}>
+              {activeFocus.tags.map((tag) => (
+                <li key={tag}>{tag}</li>
+              ))}
+            </ul>
+          </article>
         </div>
       </div>
     </section>
