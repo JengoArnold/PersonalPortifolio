@@ -5,6 +5,7 @@
   justify-content: center;
   padding: 80px 10%;
   background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  overflow: hidden;
 }
 
 .hero-content {
@@ -24,20 +25,78 @@
   font-size: 3.5rem;
   color: #111827;
   margin-bottom: 10px;
+  animation: hero-rise 0.55s ease both;
 }
 
 .hero-text h2 {
   font-size: 1.8rem;
   color: #2563eb;
-  margin-bottom: 20px;
+  margin: 0 0 12px;
 }
 
 .hero-text p {
   max-width: 700px;
-  margin: 0 0 30px;
+  margin: 0;
   font-size: 1.1rem;
   line-height: 1.7;
   color: #374151;
+}
+
+.hero-specialty-picker {
+  margin: 24px 0 14px;
+}
+
+.hero-specialty-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-specialty-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero-specialty-button {
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #334155;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-specialty-button:hover {
+  border-color: #2563eb;
+  color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.hero-specialty-button[aria-pressed="true"] {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.hero-specialty-button:focus-visible,
+.hero-buttons a:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
+}
+
+.hero-role-panel {
+  min-height: 150px;
+  animation: hero-role-enter 0.35s ease both;
 }
 
 .hero-buttons {
@@ -58,15 +117,26 @@
   border-radius: 24px;
   object-fit: cover;
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: hero-image-enter 0.7s 0.1s ease both;
+}
+
+.hero-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 26px 48px rgba(15, 23, 42, 0.17);
 }
 
 .btn-primary,
 .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 14px 28px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: color 0.25s ease, background-color 0.25s ease,
+    border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-primary {
@@ -76,6 +146,8 @@
 
 .btn-primary:hover {
   background-color: #1e40af;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
@@ -86,9 +158,50 @@
 .btn-secondary:hover {
   background-color: #2563eb;
   color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-role-enter {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-image-enter {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 900px) {
+  .hero {
+    padding: 72px 7%;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
   }
@@ -99,5 +212,56 @@
 
   .hero-buttons {
     justify-content: center;
+  }
+
+  .hero-specialty-options {
+    justify-content: center;
+  }
+
+  .hero-role-panel {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: auto;
+    padding: 64px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.7rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-text h1,
+  .hero-role-panel,
+  .hero-image {
+    animation: none;
+  }
+
+  .hero-specialty-button,
+  .hero-image,
+  .btn-primary,
+  .btn-secondary {
+    transition: none;
   }
 }

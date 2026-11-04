@@ -1,19 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Hero.css";
 
+const specialties = [
+  {
+    id: "networking",
+    label: "Networking",
+    title: "Making networks stronger by design",
+    description:
+      "I’m building a foundation in networking and system security, and learning how connected systems can stay reliable and resilient.",
+  },
+  {
+    id: "security",
+    label: "SOC analysis",
+    title: "Growing into security operations",
+    description:
+      "Threat detection and incident response keep me curious about how teams spot suspicious activity and protect digital environments.",
+  },
+  {
+    id: "development",
+    label: "Web development",
+    title: "Building useful digital experiences",
+    description:
+      "I also bring ideas to life with modern web technologies, combining practical problem solving with thoughtful, user-friendly design.",
+  },
+];
+
 function Hero() {
+  const [activeSpecialty, setActiveSpecialty] = useState(specialties[0]);
+
   return (
     <section id="home" className="hero">
       <div className="hero-content">
         <div className="hero-text">
           <h1>Jengo Arnold</h1>
-          <h2>Aspiring Networking & SOC Analyst Enthusiast</h2>
-          <p>
-            Passionate about network security, threat detection, incident
-            response, and building secure digital solutions. I also have
-            practical knowledge in software development and modern web
-            technologies.
-          </p>
+          <div className="hero-specialty-picker">
+            <span className="hero-specialty-label">Explore my focus</span>
+            <div className="hero-specialty-options" role="group" aria-label="Areas of focus">
+              {specialties.map((specialty) => (
+                <button
+                  key={specialty.id}
+                  type="button"
+                  className="hero-specialty-button"
+                  aria-pressed={activeSpecialty.id === specialty.id}
+                  onClick={() => setActiveSpecialty(specialty)}
+                >
+                  {specialty.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div
+            className="hero-role-panel"
+            key={activeSpecialty.id}
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            <h2>{activeSpecialty.title}</h2>
+            <p>{activeSpecialty.description}</p>
+          </div>
 
           <div className="hero-buttons">
             <a href="#projects" className="btn-primary">
