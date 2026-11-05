@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaFacebookF, FaWhatsapp } from "react-icons/fa6";
 import useScrollReveal from "../hooks/useScrollReveal";
 import "../styles/Hero.css";
 
@@ -72,6 +73,17 @@ function Hero() {
             <a href="/JENGO CV NEW.docx" className="btn-primary" target="_blank" rel="noopener noreferrer">
               Resume
             </a>
+          </div>
+          <div className="hero-social">
+            <span className="hero-social-label">Find me on</span>
+            <div className="hero-social-icons" aria-label="Social media icons">
+              <span role="img" aria-label="Facebook">
+                <FaFacebookF aria-hidden="true" />
+              </span>
+              <span role="img" aria-label="WhatsApp">
+                <FaWhatsapp aria-hidden="true" />
+              </span>
+            </div>
           </div>
         </div>
 

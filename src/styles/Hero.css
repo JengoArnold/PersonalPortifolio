@@ -130,6 +130,31 @@
   flex-wrap: wrap;
 }
 
+.hero-social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.hero-social-label {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hero-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #2563eb;
+  font-size: 1.25rem;
+}
+
+.hero-social-icons span {
+  display: inline-flex;
+}
+
 .hero-image-wrap {
   display: flex;
   justify-content: center;
@@ -222,6 +247,10 @@
   }
 
   .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-social {
     justify-content: center;
   }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import "../styles/Footer.css";
 
 function Footer() {
@@ -15,12 +15,6 @@ function Footer() {
             <a href="#contact">Contact</a>
           </nav>
           <div className="footer-social-icons" aria-label="Social media icons">
-            <span role="img" aria-label="Facebook">
-              <FaFacebookF aria-hidden="true" />
-            </span>
-            <span role="img" aria-label="WhatsApp">
-              <FaWhatsapp aria-hidden="true" />
-            </span>
             <span role="img" aria-label="X">
               <FaXTwitter aria-hidden="true" />
             </span>

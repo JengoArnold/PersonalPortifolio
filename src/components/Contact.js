@@ -57,43 +57,46 @@ function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
-        
-        <h2>Contact Me</h2>
-        <p>
-          Available for networking, security, and web development opportunities. Feel free to kindly reach out.
-        </p>
+        <div className="contact-card">
+          <span className="contact-eyebrow">Get in touch</span>
+          <h2>Contact Me</h2>
+          <p>
+            Available for networking, security, and web development opportunities.
+            Feel free to reach out.
+          </p>
 
-        <form onSubmit={handleSubmit} className="contact-form">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+          <form onSubmit={handleSubmit} className="contact-form">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
 
-          <button type="submit" className="contact-btn" disabled={loading}>
-            {loading ? "Sending..." : "Send Message"}
-          </button>
-        </form>
+            <button type="submit" className="contact-btn" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );
