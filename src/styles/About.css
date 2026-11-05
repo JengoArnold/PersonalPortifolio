@@ -58,7 +58,7 @@
 .about-content {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 24px;
+  border-radius: 12px;
   padding: 32px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
 }
@@ -136,7 +136,7 @@
   padding: 22px 24px;
   border: 1px solid #dbeafe;
   border-left: 4px solid #2563eb;
-  border-radius: 12px;
+  border-radius: 8px;
   background: #f8fbff;
   animation: about-focus-enter 0.35s ease both;
 }
