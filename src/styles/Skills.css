@@ -58,7 +58,8 @@
 
 .skill-icons {
   display: inline-flex;
-  flex: 0 0 28px;
+  flex: 0 0 auto;
+  min-width: 28px;
   align-items: center;
   justify-content: center;
   gap: 3px;
