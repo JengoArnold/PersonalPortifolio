@@ -45,7 +45,7 @@
 .skill-card {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   background: #ffffff;
   padding: 20px;
   border-radius: 16px;
@@ -56,9 +56,38 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.skill-icon {
+.skill-icons {
+  display: inline-flex;
+  flex: 0 0 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 1.35rem;
   color: #2563eb;
-  font-size: 1rem;
+}
+
+.skill-icons--html-css {
+  color: #e34f26;
+}
+
+.skill-icons--javascript {
+  color: #d6a800;
+}
+
+.skill-icons--react {
+  color: #149eca;
+}
+
+.skill-icons--node {
+  color: #43853d;
+}
+
+.skill-icons--firebase {
+  color: #f58220;
+}
+
+.skill-icons--git {
+  color: #f05032;
 }
 
 .skill-card:hover {

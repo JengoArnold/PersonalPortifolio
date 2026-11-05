@@ -19,6 +19,13 @@
   color: #cbd5e1;
 }
 
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
 .footer-links {
   display: flex;
   gap: 20px;
@@ -33,4 +40,28 @@
 
 .footer-links a:hover {
   color: #93c5fd;
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #93c5fd;
+  font-size: 1.15rem;
+}
+
+.footer-social-icons span {
+  display: inline-flex;
+}
+
+@media (max-width: 700px) {
+  .footer-container,
+  .footer-right {
+    justify-content: center;
+  }
+
+  .footer-container {
+    padding: 0 20px;
+    text-align: center;
+  }
 }
