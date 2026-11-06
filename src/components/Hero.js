@@ -33,6 +33,9 @@ function Hero() {
 
   return (
     <section id="home" className="hero" ref={revealRef}>
+      <div className="hero-background" aria-hidden="true">
+        <img src="/JENGO.png" alt="" />
+      </div>
       <div className="hero-content">
         <div className="hero-text">
           <h1>Jengo Arnold</h1>
@@ -85,10 +88,6 @@ function Hero() {
               </span>
             </div>
           </div>
-        </div>
-
-        <div className="hero-image-wrap">
-          <img src="/JENGO.png" alt="Jengo Arnold" className="hero-image" />
         </div>
       </div>
     </section>
