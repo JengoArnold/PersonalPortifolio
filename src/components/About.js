@@ -42,18 +42,14 @@ function About() {
         </div>
 
         <div className="about-content">
-          <p>
-            I’m Jengo Arnold, a Computer Science learner with a growing passion
-            for networking, cyber security, and building practical digital web based
-            solutions. I enjoy understanding how systems work, securing them,
-            and creating experiences that are both functional and user-friendly.
-          </p>
-          <p>
-            My interest in threat detection and incident response
-            keeps me motivated to keep learning and improving. I also enjoy
-            web development, where I combine creativity and technical skills to
-            build modern projects that solve real-world problems.
-          </p>
+           <p>
+              I build visually stunning and highly functional web applications
+              with a blend of creativity and code.
+            </p>
+            <p>
+              I specialize in crafting mobile-first, user-centric experiences
+              using cutting-edge technologies.
+            </p>
         </div>
 
         <div className="about-focus">

@@ -22,14 +22,7 @@ function Hero() {
           <h1>Jengo Arnold</h1>
           <div className="hero-intro">
             <h2>A Creative Web-App Developer and Aspiring Network Engineer</h2>
-            <p>
-              I build visually stunning and highly functional web applications
-              with a blend of creativity and code.
-            </p>
-            <p>
-              I specialize in crafting mobile-first, user-centric experiences
-              using cutting-edge technologies.
-            </p>
+           
           </div>
 
           <div className="hero-buttons">
