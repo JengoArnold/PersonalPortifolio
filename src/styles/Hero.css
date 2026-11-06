@@ -259,12 +259,17 @@
 @media (max-width: 600px) {
   .hero {
     min-height: auto;
-    padding: clamp(230px, 65vw, 300px) 20px 36px;
+    padding: clamp(270px, 85vw, 350px) 20px 36px;
+  }
+
+  .hero-background {
+    align-items: flex-start;
   }
 
   .hero-background img {
-    width: 100%;
+    width: min(100%, 516px);
     height: auto;
+    object-fit: contain;
   }
 
   .hero-text h1 {
