@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   FaFacebookF,
   FaGithub,
@@ -8,25 +8,7 @@ import {
 import useScrollReveal from "../hooks/useScrollReveal";
 import "../styles/Hero.css";
 
-const specialties = [
-  {
-    id: "networking",
-    label: "Networking",
-    title: "Making networks stronger by design",
-    description:
-      "I’m building a foundation in networking and system security, and learning how connected systems can stay reliable and resilient.",
-  },
-  {
-    id: "development",
-    label: "Web development",
-    title: "Building useful digital experiences",
-    description:
-      "I also bring ideas to life with modern web technologies, combining practical problem solving with thoughtful, user-friendly design.",
-  },
-];
-
 function Hero() {
-  const [activeSpecialty, setActiveSpecialty] = useState(specialties[0]);
   const revealRef = useScrollReveal();
 
   return (
@@ -36,32 +18,18 @@ function Hero() {
       </div>
       <div className="hero-content">
         <div className="hero-text">
+          <span className="hero-eyebrow">Hello, I’m</span>
           <h1>Jengo Arnold</h1>
-          <div className="hero-specialty-picker">
-            <span className="hero-specialty-label">Explore my focus</span>
-            <div className="hero-specialty-options" role="group" aria-label="Areas of focus">
-              {specialties.map((specialty) => (
-                <button
-                  key={specialty.id}
-                  type="button"
-                  className="hero-specialty-button"
-                  aria-pressed={activeSpecialty.id === specialty.id}
-                  onClick={() => setActiveSpecialty(specialty)}
-                >
-                  {specialty.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div
-            className="hero-role-panel"
-            key={activeSpecialty.id}
-            aria-live="polite"
-            aria-atomic="true"
-          >
-            <h2>{activeSpecialty.title}</h2>
-            <p>{activeSpecialty.description}</p>
+          <div className="hero-intro">
+            <h2>A Creative Web-App Developer and Aspiring Network Engineer</h2>
+            <p>
+              I build visually stunning and highly functional web applications
+              with a blend of creativity and code.
+            </p>
+            <p>
+              I specialize in crafting mobile-first, user-centric experiences
+              using cutting-edge technologies.
+            </p>
           </div>
 
           <div className="hero-buttons">
@@ -76,7 +44,6 @@ function Hero() {
             </a>
           </div>
           <div className="hero-social">
-            <span className="hero-social-label">Find me on</span>
             <div className="hero-social-icons" aria-label="Social media icons">
               <span role="img" aria-label="Facebook">
                 <FaFacebookF aria-hidden="true" />

@@ -68,79 +68,37 @@
 .hero-text h1 {
   font-size: 3.5rem;
   color: #111827;
-  margin-bottom: 10px;
+  margin: 4px 0 14px;
   animation: hero-rise 0.55s ease both;
 }
 
-.hero-text h2 {
-  font-size: 1.8rem;
-  color: #2563eb;
-  margin: 0 0 12px;
+.hero-eyebrow {
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.hero-text p {
+.hero-intro h2 {
+  max-width: 760px;
+  margin: 0 auto 12px;
+  font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+  line-height: 1.35;
+  color: #2563eb;
+}
+
+.hero-intro p {
   max-width: 700px;
   margin: 0 auto;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: #374151;
 }
 
-.hero-specialty-picker {
-  margin: 24px 0 14px;
-}
-
-.hero-specialty-label {
-  display: block;
-  margin-bottom: 10px;
-  color: #64748b;
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.hero-specialty-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.hero-specialty-button {
-  min-height: 40px;
-  padding: 8px 14px;
-  border: 1px solid #cbd5e1;
-  border-radius: 999px;
-  background: #ffffff;
-  color: #334155;
-  font: inherit;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: color 0.2s ease, background-color 0.2s ease,
-    border-color 0.2s ease, transform 0.2s ease;
-}
-
-.hero-specialty-button:hover {
-  border-color: #2563eb;
-  color: #1d4ed8;
-  transform: scale(1.03);
-}
-
-.hero-specialty-button[aria-pressed="true"] {
-  border-color: #2563eb;
-  background: #2563eb;
-  color: #ffffff;
-}
-
-.hero-specialty-button:focus-visible,
 .hero-buttons a:focus-visible {
   outline: 3px solid rgba(37, 99, 235, 0.35);
   outline-offset: 3px;
-}
-
-.hero-role-panel {
-  min-height: 150px;
-  animation: hero-role-enter 0.35s ease both;
 }
 
 .hero-buttons {
@@ -153,6 +111,7 @@
 .hero-social {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   margin-top: 24px;
 }
@@ -222,18 +181,6 @@
   }
 }
 
-@keyframes hero-role-enter {
-  from {
-    opacity: 0;
-    transform: translateX(12px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 @media (max-width: 900px) {
   .hero {
     padding-top: clamp(340px, 64vh, 480px);
@@ -247,13 +194,6 @@
     justify-content: center;
   }
 
-  .hero-specialty-options {
-    justify-content: center;
-  }
-
-  .hero-role-panel {
-    min-height: 0;
-  }
 }
 
 @media (max-width: 600px) {
@@ -276,11 +216,7 @@
     font-size: 2.4rem;
   }
 
-  .hero-text h2 {
-    font-size: 1.5rem;
-  }
-
-  .hero-text p {
+  .hero-intro p {
     font-size: 1rem;
   }
 
@@ -301,12 +237,10 @@
     transition: none;
   }
 
-  .hero-text h1,
-  .hero-role-panel {
+  .hero-text h1 {
     animation: none;
   }
 
-  .hero-specialty-button,
   .btn-primary,
   .btn-secondary {
     transition: none;
