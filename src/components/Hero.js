@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { FaFacebookF, FaWhatsapp } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaWhatsapp,
+  FaXTwitter,
+} from "react-icons/fa6";
 import useScrollReveal from "../hooks/useScrollReveal";
 import "../styles/Hero.css";
 
@@ -10,13 +15,6 @@ const specialties = [
     title: "Making networks stronger by design",
     description:
       "I’m building a foundation in networking and system security, and learning how connected systems can stay reliable and resilient.",
-  },
-  {
-    id: "security",
-    label: "SOC analysis",
-    title: "Growing into security operations",
-    description:
-      "Threat detection and incident response keep me curious about how teams spot suspicious activity and protect digital environments.",
   },
   {
     id: "development",
@@ -85,6 +83,12 @@ function Hero() {
               </span>
               <span role="img" aria-label="WhatsApp">
                 <FaWhatsapp aria-hidden="true" />
+              </span>
+              <span role="img" aria-label="GitHub">
+                <FaGithub aria-hidden="true" />
+              </span>
+              <span role="img" aria-label="X">
+                <FaXTwitter aria-hidden="true" />
               </span>
             </div>
           </div>

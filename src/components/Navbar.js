@@ -8,7 +8,7 @@ function Navbar() {
 
   return (
     <nav className={`navbar ${isOpen ? "open" : ""}`} aria-label="Main navigation">
-      <div className="logo">JA</div>
+      <div className="logo">J | A</div>
 
       <button
         className="menu-toggle"

@@ -8,8 +8,8 @@ const focusAreas = [
     label: "Cybersecurity",
     title: "Building a security-first mindset",
     description:
-      "I’m developing my skills in SOC analysis, threat detection, and incident response, with a focus on understanding how to protect real systems.",
-    tags: ["SOC analysis", "Threat detection", "Incident response"],
+      "I’m developing my skills in threat detection and incident response, with a focus on understanding how to protect real systems.",
+    tags: ["Threat detection", "Incident response"],
   },
   {
     id: "development",
@@ -49,7 +49,7 @@ function About() {
             and creating experiences that are both functional and user-friendly.
           </p>
           <p>
-            My interest in SOC analysis, threat detection, and incident response
+            My interest in threat detection and incident response
             keeps me motivated to keep learning and improving. I also enjoy
             web development, where I combine creativity and technical skills to
             build modern projects that solve real-world problems.
