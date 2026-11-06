@@ -1,6 +1,7 @@
 import React from "react";
 import {
   FaFacebookF,
+  FaDownload,
   FaGithub,
   FaWhatsapp,
   FaXTwitter,
@@ -21,7 +22,10 @@ function Hero() {
           <span className="hero-eyebrow">Hello, I’m</span>
           <h1>Jengo Arnold</h1>
           <div className="hero-intro">
-            <h2>A Creative Web-App Developer and Aspiring Network Engineer</h2>
+            <h2>
+              <span>Full-Stack Web-App Developer</span>
+              <span>Aspiring Network Engineer</span>
+            </h2>
            
           </div>
 
@@ -31,9 +35,6 @@ function Hero() {
             </a>
             <a href="#contact" className="btn-secondary">
               Contact Me
-            </a>
-            <a href="/JENGO CV NEW.docx" className="btn-primary" target="_blank" rel="noopener noreferrer">
-              Resume
             </a>
           </div>
           <div className="hero-social">
@@ -51,6 +52,15 @@ function Hero() {
                 <FaXTwitter aria-hidden="true" />
               </span>
             </div>
+            <a
+              href="/JENGO CV NEW.docx"
+              className="hero-resume-link"
+              download
+              aria-label="Download resume"
+            >
+              <FaDownload aria-hidden="true" />
+              <span>Resume</span>
+            </a>
           </div>
         </div>
       </div>

@@ -60,10 +60,7 @@ function Contact() {
         <div className="contact-card">
           <span className="contact-eyebrow">Get in touch</span>
           <h2>Contact Me</h2>
-          <p>
-            Available for networking, security, and web development opportunities.
-            Feel free to reach out.
-          </p>
+          
 
           <form onSubmit={handleSubmit} className="contact-form">
             <input

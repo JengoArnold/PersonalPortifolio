@@ -77,9 +77,9 @@
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
-  color: #111827;
-  margin: 4px 0 14px;
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  color: #334155;
+  margin: 4px 0 18px;
   transition-delay: 0.22s;
 }
 
@@ -92,14 +92,26 @@
 }
 
 .hero-intro h2 {
-  max-width: 760px;
-  margin: 0 auto 12px;
-  font-size: clamp(1.25rem, 2.5vw, 1.7rem);
-  line-height: 1.35;
-  color: #2563eb;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  font-size: clamp(1.75rem, 3.5vw, 2.8rem);
+  font-weight: 750;
+  line-height: 1.2;
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.55s ease 0.32s, transform 0.55s ease 0.32s;
+}
+
+.hero-intro h2 span {
+  display: block;
+}
+
+.hero-intro h2 span:first-child {
+  color: #1d4ed8;
+}
+
+.hero-intro h2 span:last-child {
+  color: #1e3a8a;
 }
 
 .hero.is-visible .hero-eyebrow,
@@ -133,6 +145,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 14px;
   margin-top: 24px;
 }
@@ -153,6 +166,38 @@
 
 .hero-social-icons span {
   display: inline-flex;
+}
+
+.hero-resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.hero-resume-link:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+.hero-resume-link:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
+}
+
+@media (min-width: 901px) {
+  .hero {
+    padding-top: clamp(380px, 62vh, 520px);
+    overflow: visible;
+  }
+
+  .hero-background {
+    top: -56px;
+  }
 }
 
 .btn-primary,
@@ -180,13 +225,13 @@
 }
 
 .btn-secondary {
+  background-color: transparent;
   border: 2px solid #2563eb;
   color: #2563eb;
 }
 
 .btn-secondary:hover {
-  background-color: #2563eb;
-  color: #ffffff;
+  background-color: rgba(37, 99, 235, 0.08);
   transform: scale(1.025);
 }
 
