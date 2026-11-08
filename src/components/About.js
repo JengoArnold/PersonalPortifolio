@@ -4,20 +4,12 @@ import "../styles/About.css";
 
 const focusAreas = [
   {
-    id: "security",
-    label: "Cybersecurity",
-    title: "Building a security-first mindset",
-    description:
-      "I’m developing my skills in threat detection and incident response, with a focus on understanding how to protect real systems.",
-    tags: ["Threat detection", "Incident response"],
-  },
-  {
     id: "development",
-    label: "Web development",
-    title: "Making useful ideas real",
+    label: "Web App Development",
+    title: "Building useful web applications",
     description:
       "I enjoy turning practical problems into clear, user-friendly web experiences and strengthening my skills with every project I build.",
-    tags: ["Frontend", "Problem solving", "User experience"],
+    tags: ["Frontend", "Backend", "User experience"],
   },
   {
     id: "networking",
