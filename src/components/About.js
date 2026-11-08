@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaDownload } from "react-icons/fa6";
 import useScrollReveal from "../hooks/useScrollReveal";
 import "../styles/About.css";
 
@@ -42,12 +43,20 @@ function About() {
               I specialize in crafting mobile-first, user-centric experiences
               using cutting-edge technologies.
             </p>
+            <a
+              href="/JENGO CV NEW.docx"
+              className="about-resume-link"
+              download
+            >
+              <FaDownload aria-hidden="true" />
+              <span>Download Resume</span>
+            </a>
         </div>
 
         <div className="about-focus">
           <div className="about-focus-heading">
             <span>What I’m exploring</span>
-            <p>Choose a focus to learn more about what drives me.</p>
+          
           </div>
 
           <div
