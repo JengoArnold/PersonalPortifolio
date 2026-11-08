@@ -26,7 +26,11 @@ function Hero() {
               <span>Full-Stack Web-App Developer</span>
               <span>Aspiring Network Engineer</span>
             </h2>
-           
+            <p>
+              Passionate about full-stack web development and computer
+              networking, with a focus on building modern applications and
+              understanding the networks that power our digital world.
+            </p>
           </div>
 
           <div className="hero-buttons">
