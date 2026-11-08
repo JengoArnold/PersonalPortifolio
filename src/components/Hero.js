@@ -1,7 +1,6 @@
 import React from "react";
 import {
   FaFacebookF,
-  FaDownload,
   FaGithub,
   FaWhatsapp,
   FaXTwitter,
@@ -56,15 +55,6 @@ function Hero() {
                 <FaXTwitter aria-hidden="true" />
               </span>
             </div>
-            <a
-              href="/JENGO CV NEW.docx"
-              className="hero-resume-link"
-              download
-              aria-label="Download resume"
-            >
-              <FaDownload aria-hidden="true" />
-              <span>Resume</span>
-            </a>
           </div>
         </div>
       </div>

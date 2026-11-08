@@ -172,27 +172,6 @@
   display: inline-flex;
 }
 
-.hero-resume-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: #2563eb;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.25s ease;
-}
-
-.hero-resume-link:hover {
-  color: #1e40af;
-  text-decoration: underline;
-}
-
-.hero-resume-link:focus-visible {
-  outline: 3px solid rgba(37, 99, 235, 0.35);
-  outline-offset: 3px;
-}
-
 @media (min-width: 901px) {
   .hero {
     padding-top: clamp(380px, 62vh, 520px);

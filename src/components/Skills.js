@@ -33,10 +33,7 @@ function Skills() {
         <div className="skills-heading">
           <span>What I work with</span>
           <h2>Technical Skills</h2>
-          <p>
-            I keep building my knowledge across networking, security, and web
-            technologies to create strong, practical solutions.
-          </p>
+         
         </div>
 
         <div className="skills-grid">

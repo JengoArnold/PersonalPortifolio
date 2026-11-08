@@ -43,14 +43,6 @@ function About() {
               I specialize in crafting mobile-first, user-centric experiences
               using cutting-edge technologies.
             </p>
-            <a
-              href="/JENGO CV NEW.docx"
-              className="about-resume-link"
-              download
-            >
-              <FaDownload aria-hidden="true" />
-              <span>Download Resume</span>
-            </a>
         </div>
 
         <div className="about-focus">
@@ -75,6 +67,14 @@ function About() {
                 {focus.label}
               </button>
             ))}
+            <a
+              href="/JENGO CV NEW.docx"
+              className="about-resume-link"
+              download
+            >
+              <FaDownload aria-hidden="true" />
+              <span>Resume</span>
+            </a>
           </div>
 
           <article className="about-focus-panel" key={activeFocus.id}>
