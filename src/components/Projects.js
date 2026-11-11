@@ -5,37 +5,35 @@ function Projects() {
   const projects = [
     {
       title: "Personal Portfolio Website",
-      description:
-        "A polished React portfolio showcasing my work, skills, and contact options with responsive layout and clean design.",
+    
       tech: ["React", "Firebase", "CSS"],
       github: " https://jengo.arnoldjaz5.workers.dev/",
     },
     {
       title: "Jerry International School Website",
-      description:
-        "Modern school website built to display admissions, curriculum, events, and staff information in a user-friendly format.",
+     
       tech: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/JengoArnold",
     },
     {
       title: "Harfordbridge International School Website",
-      description:
-        "Professional educational website designed to enhance the school’s online presence with clear navigation and responsive sections.",
+    
       tech: ["React", "Responsive Design"],
       github: "https://github.com/JengoArnold",
     },
     {
       title: "Dry My Tears International Website",
       description:
-        "A nonprofit website built to highlight mission, programs, volunteer opportunities, and donation support for the community.",
+        "A mission-driven website for a nonprofit organization focused on awareness, support, and community impact.",
       tech: ["React", "Accessibility", "Content Strategy"],
-      github: "  https://drymytearsinternational.org/",   
+      image:
+        "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80",
+      github: "https://drymytearsinternational.org/",
     },
    
     {
       title: "GitHub Account",
-      description:
-        "I used github to host the project's source code, track changes, and manage version control throughout all developments.",
+   
       tech: ["GIT", "GITHUB"],
       github: "https://github.com/JengoArnold",
     },
@@ -54,6 +52,21 @@ function Projects() {
         <div className="projects-grid">
           {projects.map((project, index) => (
             <article key={index} className="project-card">
+              {project.image ? (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-image-link"
+                >
+                  <img
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    className="project-image"
+                  />
+                </a>
+              ) : null}
+
               <div className="project-card-top">
                 <span className="project-label">Project {index + 1}</span>
                 <h3>{project.title}</h3>
@@ -76,7 +89,9 @@ function Projects() {
                   rel="noreferrer"
                   className="github-btn"
                 >
-                  View Project
+                  {project.title === "Dry My Tears International Website"
+                    ? "Visit Website"
+                    : "View Project"}
                 </a>
               </div>
             </article>
