@@ -6,6 +6,10 @@
 .about-container {
   max-width: 820px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .about-intro,
@@ -101,10 +105,15 @@
 .about-focus {
   margin: 24px auto 0;
   max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .about-focus-heading {
   margin-bottom: 14px;
+  text-align: center;
 }
 
 .about-focus-heading span {
@@ -121,8 +130,10 @@
 .about-focus-options {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .about-focus-button {
@@ -157,10 +168,12 @@
 }
 
 .about-focus-panel {
+  width: 100%;
   padding: 20px 22px;
   border: 1px solid #dbeafe;
   border-radius: 8px;
   background: #ffffff;
+  text-align: center;
   animation: about-focus-enter 0.35s ease both;
 }
 
@@ -179,6 +192,7 @@
 .about-focus-panel ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
   margin: 0;
   padding: 0;
