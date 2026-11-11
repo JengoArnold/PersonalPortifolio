@@ -34,16 +34,7 @@ function About() {
           <h2>About Me</h2>
         </div>
 
-        <div className="about-content">
-           <p>
-              I build visually stunning and highly functional web applications
-              with a blend of creativity and code.
-            </p>
-            <p>
-              I specialize in crafting mobile-first, user-centric experiences
-              using cutting-edge technologies.
-            </p>
-        </div>
+      
 
         <div className="about-focus">
           <div className="about-focus-heading">
