@@ -26,7 +26,8 @@ function Projects() {
       description:
         "A mission-driven website for a nonprofit organization focused on awareness, support, and community impact.",
       tech: ["React", "Accessibility", "Content Strategy"],
-      image: "https://drymytearsinternational.org/images/hero_converted_1.webp",
+      image:
+        "https://image.thum.io/get/width/1200/https://drymytearsinternational.org/",
       github: "https://drymytearsinternational.org/",
     },
    
