@@ -91,7 +91,9 @@ function Projects() {
                 >
                   {project.title === "Dry My Tears International Website"
                     ? "Visit Website"
-                    : "View Project"}
+                    : project.title === "GitHub Account"
+                      ? "Visit GitHub"
+                      : "View Project"}
                 </a>
               </div>
             </article>
