@@ -5,13 +5,18 @@ import {
   FaGitAlt,
   FaGlobe,
   FaHtml5,
+  FaImage,
   FaJs,
   FaNetworkWired,
   FaNodeJs,
   FaReact,
   FaRoute,
 } from "react-icons/fa6";
-import { SiFirebase } from "react-icons/si";
+import {
+  SiExpress,
+  SiFirebase,
+  SiMysql,
+} from "react-icons/si";
 import "../styles/Skills.css";
 
 function Skills() {
@@ -23,7 +28,10 @@ function Skills() {
     { name: "JavaScript", icons: [FaJs], iconClass: "javascript" },
     { name: "React", icons: [FaReact], iconClass: "react" },
     { name: "Node.js", icons: [FaNodeJs], iconClass: "node" },
+    { name: "Express", icons: [SiExpress], iconClass: "express" },
     { name: "Firebase", icons: [SiFirebase], iconClass: "firebase" },
+    { name: "MySQL", icons: [SiMysql], iconClass: "mysql" },
+    { name: "Adobe Photoshop", icons: [FaImage], iconClass: "photoshop" },
     { name: "Git & GitHub", icons: [FaGitAlt, FaGithub], iconClass: "git" },
   ];
 

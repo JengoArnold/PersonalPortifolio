@@ -87,7 +87,11 @@ function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="github-btn"
+                  className={
+                    project.title === "GitHub Account"
+                      ? "about-resume-link"
+                      : "github-btn"
+                  }
                 >
                   {project.title === "Dry My Tears International Website"
                     ? "Visit Website"
